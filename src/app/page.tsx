@@ -1,7 +1,8 @@
 import Bag from '@/components/Bag';
 
 export default async function Home() {
-  const productsResponse = await fetch('/api/products');
+  const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
+  const productsResponse = await fetch(`${apiBaseUrl}/api/products`);
   const { products } = await productsResponse.json();
 
   return (
