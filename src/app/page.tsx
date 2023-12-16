@@ -1,5 +1,3 @@
-'use client';
-
 import Bag from '@/components/Bag';
 
 export default async function Home() {
