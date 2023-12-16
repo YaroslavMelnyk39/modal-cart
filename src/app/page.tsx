@@ -1,7 +1,7 @@
 import Bag from '@/components/Bag';
 
 export default async function Home() {
-  const productsResponse = await fetch('http://localhost:3000/api/products');
+  const productsResponse = await fetch('/api/products');
   const { products } = await productsResponse.json();
 
   return (
